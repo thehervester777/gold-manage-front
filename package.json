@@ -1,0 +1,38 @@
+{
+  "name": "ithika-gold-house",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Ithika Gold House — Gold, Loan & Pledge Management System",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:fast": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "build:single": "node scripts/build-single.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.15.0",
+    "html-to-image": "^1.11.13",
+    "idb-keyval": "^6.3.0",
+    "immer": "^11.1.21",
+    "jspdf": "^4.2.1",
+    "lenis": "^1.3.26",
+    "lucide-react": "^1.56.0",
+    "qrcode-generator": "^2.0.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "~5.9",
+    "vite": "^8.3.4"
+  }
+}

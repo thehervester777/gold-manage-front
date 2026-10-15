@@ -1,0 +1,197 @@
+/*
+ * Touchstone design tokens.
+ * A jeweller tests gold by drawing it across a dark stone and reading the streak.
+ * The interface borrows that: slate-ink surfaces, a gold streak as the one accent.
+ */
+:root {
+  /* type */
+  --font-display: 'Newsreader Variable', 'Noto Serif Bengali Variable', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Instrument Sans Variable', 'Noto Sans Bengali Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Noto Sans Bengali Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+  --track-display: -0.018em;
+
+  /* geometry */
+  --r-xs: 6px;
+  --r-sm: 9px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --sidebar-w: 268px;
+  --sidebar-w-collapsed: 80px;
+  --topbar-h: 68px;
+  --page-max: 1360px;
+  --gutter: 32px;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 140ms;
+  --t-med: 260ms;
+
+  /* light palette */
+  --bg: #f0f2f6;
+  --surface: #ffffff;
+  --surface-2: #f6f7fa;
+  --surface-3: #eceff4;
+  --line: #e1e5ec;
+  --line-strong: #c9d0db;
+  --ink: #121923;
+  --ink-2: #384455;
+  --ink-3: #647084;
+  --ink-inverse: #f3f5f9;
+
+  --gold-50: #fbf5e6;
+  --gold-100: #f5e6bd;
+  --gold-300: #e6c068;
+  --gold-500: #c99a32;
+  --gold-600: #aa761b;
+  --gold-text: #86590b;
+  --gold-fill: #d4a540;
+  --gold-fill-hover: #dcb255;
+  --on-gold: #1c1405;
+  --gold-streak: linear-gradient(90deg, transparent 0%, #b98622 14%, #f0cf7a 52%, #b98622 86%, transparent 100%);
+
+  --ok: #1b7a53;
+  --ok-bg: #e2f3ea;
+  --warn: #8f5600;
+  --warn-bg: #fbeed3;
+  --danger: #b3302d;
+  --danger-bg: #fbe5e2;
+  --info: #285d9c;
+  --info-bg: #e3edf8;
+  --neutral-bg: #eceff4;
+
+  --focus: rgba(201, 154, 50, 0.55);
+  --shadow-1: 0 1px 0 rgba(18, 25, 35, 0.04), 0 1px 3px rgba(18, 25, 35, 0.06);
+  --shadow-2: 0 2px 4px rgba(18, 25, 35, 0.04), 0 12px 28px -10px rgba(18, 25, 35, 0.16);
+  --shadow-3: 0 4px 10px rgba(18, 25, 35, 0.06), 0 30px 70px -22px rgba(18, 25, 35, 0.34);
+  --glass: rgba(240, 242, 246, 0.93);
+  --scrim: rgba(12, 17, 24, 0.5);
+
+  /* the sidebar and hero stay dark in both themes */
+  --ink-bg: #10161e;
+  --ink-bg-2: #171f2a;
+  --ink-line: rgba(255, 255, 255, 0.08);
+  --ink-text: #e7ebf2;
+  --ink-text-2: #a4afbf;
+  --ink-text-3: #75839a;
+
+  /* charts */
+  --c1: #c99a32;
+  --c2: #2f6aa8;
+  --c3: #1b7a53;
+  --c4: #8a5cc4;
+  --c5: #b3302d;
+  --chart-grid: #e6e9ef;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0c1117;
+    --surface: #141b25;
+    --surface-2: #19212d;
+    --surface-3: #202a38;
+    --line: #243040;
+    --line-strong: #34445a;
+    --ink: #e9edf3;
+    --ink-2: #bcc6d4;
+    --ink-3: #8795a9;
+    --ink-inverse: #121923;
+
+    --gold-50: rgba(214, 170, 70, 0.1);
+    --gold-100: rgba(214, 170, 70, 0.2);
+    --gold-300: #e2b95c;
+    --gold-500: #d6aa46;
+    --gold-600: #e2b95c;
+    --gold-text: #e6bf62;
+    --gold-fill: #d6aa46;
+    --gold-fill-hover: #e2b95c;
+    --on-gold: #1c1405;
+
+    --ok: #5ed3a2;
+    --ok-bg: rgba(94, 211, 162, 0.12);
+    --warn: #f0b95a;
+    --warn-bg: rgba(240, 185, 90, 0.13);
+    --danger: #ff8d80;
+    --danger-bg: rgba(255, 141, 128, 0.13);
+    --info: #86b4f2;
+    --info-bg: rgba(134, 180, 242, 0.13);
+    --neutral-bg: #202a38;
+
+    --focus: rgba(226, 185, 92, 0.6);
+    --shadow-1: 0 1px 0 rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.35);
+    --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.3), 0 14px 32px -10px rgba(0, 0, 0, 0.6);
+    --shadow-3: 0 4px 10px rgba(0, 0, 0, 0.4), 0 30px 70px -20px rgba(0, 0, 0, 0.8);
+    --glass: rgba(12, 17, 23, 0.92);
+    --scrim: rgba(3, 6, 10, 0.66);
+
+    --ink-bg: #0a0f15;
+    --ink-bg-2: #121a24;
+
+    --c1: #e2b95c;
+    --c2: #6aa3e6;
+    --c3: #5ed3a2;
+    --c4: #b393e6;
+    --c5: #ff8d80;
+    --chart-grid: #222d3c;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0c1117;
+  --surface: #141b25;
+  --surface-2: #19212d;
+  --surface-3: #202a38;
+  --line: #243040;
+  --line-strong: #34445a;
+  --ink: #e9edf3;
+  --ink-2: #bcc6d4;
+  --ink-3: #8795a9;
+  --ink-inverse: #121923;
+
+  --gold-50: rgba(214, 170, 70, 0.1);
+  --gold-100: rgba(214, 170, 70, 0.2);
+  --gold-300: #e2b95c;
+  --gold-500: #d6aa46;
+  --gold-600: #e2b95c;
+  --gold-text: #e6bf62;
+  --gold-fill: #d6aa46;
+  --gold-fill-hover: #e2b95c;
+  --on-gold: #1c1405;
+
+  --ok: #5ed3a2;
+  --ok-bg: rgba(94, 211, 162, 0.12);
+  --warn: #f0b95a;
+  --warn-bg: rgba(240, 185, 90, 0.13);
+  --danger: #ff8d80;
+  --danger-bg: rgba(255, 141, 128, 0.13);
+  --info: #86b4f2;
+  --info-bg: rgba(134, 180, 242, 0.13);
+  --neutral-bg: #202a38;
+
+  --focus: rgba(226, 185, 92, 0.6);
+  --shadow-1: 0 1px 0 rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.3), 0 14px 32px -10px rgba(0, 0, 0, 0.6);
+  --shadow-3: 0 4px 10px rgba(0, 0, 0, 0.4), 0 30px 70px -20px rgba(0, 0, 0, 0.8);
+  --glass: rgba(12, 17, 23, 0.92);
+  --scrim: rgba(3, 6, 10, 0.66);
+
+  --ink-bg: #0a0f15;
+  --ink-bg-2: #121a24;
+
+  --c1: #e2b95c;
+  --c2: #6aa3e6;
+  --c3: #5ed3a2;
+  --c4: #b393e6;
+  --c5: #ff8d80;
+  --chart-grid: #222d3c;
+  color-scheme: dark;
+}
+
+/* Bangla joins letters into conjuncts: never track it, and give it more air. */
+html[lang='bn'] {
+  --track-display: 0em;
+}
